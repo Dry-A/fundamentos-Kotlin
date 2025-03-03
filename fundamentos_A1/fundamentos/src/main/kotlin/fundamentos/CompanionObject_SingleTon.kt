@@ -1,4 +1,4 @@
-package fundamentos.companionObject
+package fundamentos
 
 class GrupoWhatsApp(val nome: String) {
 
@@ -13,7 +13,7 @@ class GrupoWhatsApp(val nome: String) {
 
     fun enviarMensagem(mensagem: String) {
 
-        if (Moderacao.mensagemAprovada(mensagem)) {
+        if (mensagemAprovada(mensagem)) {
 
             println("💬 [$nome] mensagem enviada: $mensagem")
             ServidorWhatsApp.enviarMensagem() //notifica o servidor
@@ -69,6 +69,10 @@ fun main() {
     grupoFamilia.enviarMensagem("Oi, tudo bem?")
     grupoFamilia.enviarMensagem("Oi, tudo bem? palavrão")
     grupoFamilia.enviarMensagem("Oi, tudo bem? besta")
+    grupoTrabalho.enviarMensagem("Oi, tudo bem? turma besta")
+    grupoTrabalho.enviarMensagem("Oi, tudo bem? turma")
+    grupoTrabalho.enviarMensagem("Oi, tudo bem? turma spam")
+    grupoTrabalho.enviarMensagem("Vamos fazer uma trilha?")
 
     ServidorWhatsApp.mostrarEstatisticas()
 }
