@@ -1,4 +1,4 @@
-package fundamentos
+package fundamentos.statics
 
 class GrupoWhatsApp(val nome: String) {
 
@@ -25,7 +25,7 @@ class GrupoWhatsApp(val nome: String) {
 
     companion object Moderacao {
 
-        private val palavrasProibidas = listOf("palavrão", "spam", "besta")
+        private val palavrasProibidas = listOf("palavrão", "spam", "besta", "boboca", "bolsominion")
 
         fun mensagemAprovada(mensagem: String): Boolean {
 
